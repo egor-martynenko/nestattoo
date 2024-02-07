@@ -1,0 +1,48 @@
+.icon-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &.left {
+      margin-right: 10px;
+      & svg{
+        rotate: 180deg;
+      }
+    }
+  
+    &.right {
+      margin-left: 10px;
+    }
+  
+    &.disable {
+      opacity: 0.5;
+      cursor: auto;
+      &:hover {
+        background-color: white;
+      }
+    }
+  
+    &:hover {
+      background-color: rgb(236, 159, 0);
+      svg{
+        opacity: 1;
+      }
+    }
+
+    & svg, svg:hover{
+      fill: black;
+    }
+
+  }
+
+  @media (max-width: 768px){
+    .icon-btn {
+      display: none;
+    }
+  }
